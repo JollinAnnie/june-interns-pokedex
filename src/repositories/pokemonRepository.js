@@ -2,16 +2,6 @@
 import axios from 'axios';
 import { config } from '../config/index.js';
 
-// Get the base URL from config
-const { baseUrl: BASE_URL } = config.pokeapi;
-
-// Example repository function
-async function getPokemonByNameOrId(nameOrId) {
-  // Make HTTP request to PokeAPI
-  const response = await axios.get(`${BASE_URL}/pokemon/${nameOrId}`);
-  return response.data;
-}
-
 /**
  * Fetch a paginated list of all Pokemon
  * @param {number} limit - Number of Pokemon to fetch
